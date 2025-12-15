@@ -1,14 +1,27 @@
-# Streams in Java:
+JUnit is a testing framework for Java that allows you to write and run automated unit tests for methods or classes. It helps ensure that your code works correctly and makes it easier to detect errors quickly.
 
-Streams are data flows that allow processing collections in a declarative and functional way without modifying the original data. Introduced in Java 8, they make operations like filtering, mapping, reducing, and sorting concise and readable. Streams can be sequential (processed one by one) or parallel (processed simultaneously using multiple threads).
+## How to use:
 
-## Main Operations:
+Add JUnit to your project (via Maven, Gradle, or manually).
 
-- Intermediate operations (return another stream): filter(), map(), sorted().
-- Terminal operations (produce a result or side effect): collect(), forEach(), reduce().
+Create a separate test class.
 
-## Advantages:
+Use annotations such as:
 
-- Cleaner and more readable code.
-- Supports parallel processing.
-- Avoids explicit loops and mutations of the original collections.
+`@Test` → marks a method as a test.
+
+`@BeforeEach` → runs before each test.
+
+`@AfterEach` → runs after each test.
+
+Use assertion methods to check results: assertEquals(expected, actual), assertTrue(condition), etc.
+
+Run the tests in your IDE or via command line.
+
+## What it does:
+
+Automates test execution.
+
+Helps check if code changes break existing functionality.
+
+Ensures your code remains reliable and safe during development.

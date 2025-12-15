@@ -3,10 +3,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-/**
- * @class Person
- * @brief Represents a person with name and gender
- */
 class Person {
     private String name;
     private String gender;
@@ -25,11 +21,14 @@ class Person {
     }
 }
 
-/**
- * @class FilterWomen
- * @brief Main class to read a list of people and filter only women
- */
 public class FilterWomen {
+
+    public static List<Person> filterWomen(List<Person> people) {
+        return people.stream()
+                     .filter(p -> p.getGender().equals("F"))
+                     .collect(Collectors.toList());
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<Person> people = new ArrayList<>();
@@ -52,9 +51,7 @@ public class FilterWomen {
             people.add(new Person(name, gender));
         }
 
-        List<Person> women = people.stream()
-                                   .filter(p -> p.getGender().equals("F"))
-                                   .collect(Collectors.toList());
+        List<Person> women = filterWomen(people);
 
         System.out.println("\nList of women:");
         women.forEach(System.out::println);
