@@ -1,7 +1,7 @@
 JAVAC = javac
 JAVA = java
 
-SRC = TableExample.java
+SRC = TableExampleRuntime.java
 
 all: compile run
 
@@ -9,7 +9,7 @@ compile:
 	$(JAVAC) $(SRC)
 
 run:
-	$(JAVA) TableExample
+	$(JAVA) TableExampleRuntime
 
 clean:
 	rm -f *.class

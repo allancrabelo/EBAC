@@ -1,19 +1,13 @@
-# Annotations in Java:
+# Reflections in Java:
 
-Annotations are metadata that can be added to classes, methods, variables, or other code elements. They do not change the program logic but provide additional information to the compiler or frameworks. Common examples:
+Reflection is a feature that allows a program to inspect and modify classes, objects, methods, and fields at runtime, even if they are private. With Reflection, you can dynamically create class instances, invoke methods, access or modify fields, and retrieve information about annotations, interfaces, and inheritance. It is widely used in frameworks, testing libraries, and ORMs like Spring and Hibernate for flexibility and automation.
 
-`@Override` → indicates a method overrides another.
+## Main Uses:
 
-`@Deprecated` → marks elements that should no longer be used.
+- Retrieve information about classes, methods, and fields (Class<?>, Method, Field).
+- Invoke methods dynamically (method.invoke(obj, args)).
+- Create instances at runtime (clazz.newInstance() or clazz.getDeclaredConstructor().newInstance()).
+- Access or modify private fields (field.setAccessible(true)).
 
-`@Test` → used in unit testing.
-
-# Exceptions in Java:
-
-Exceptions allow a program to handle errors or exceptional situations in an organized way. There are two main types:
-
- - Checked Exceptions → must be handled with try-catch or declared with throws.
- - Unchecked Exceptions → inherit from RuntimeException and handling is optional.
-
-## Advantage:
-Using exceptions separates the main logic from error handling, making the code more robust and safe.
+## Caution:
+Reflection can affect performance and should be used carefully, as it can break encapsulation.
