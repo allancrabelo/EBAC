@@ -1,13 +1,14 @@
-# Reflections in Java:
+# Streams in Java:
 
-Reflection is a feature that allows a program to inspect and modify classes, objects, methods, and fields at runtime, even if they are private. With Reflection, you can dynamically create class instances, invoke methods, access or modify fields, and retrieve information about annotations, interfaces, and inheritance. It is widely used in frameworks, testing libraries, and ORMs like Spring and Hibernate for flexibility and automation.
+Streams are data flows that allow processing collections in a declarative and functional way without modifying the original data. Introduced in Java 8, they make operations like filtering, mapping, reducing, and sorting concise and readable. Streams can be sequential (processed one by one) or parallel (processed simultaneously using multiple threads).
 
-## Main Uses:
+## Main Operations:
 
-- Retrieve information about classes, methods, and fields (Class<?>, Method, Field).
-- Invoke methods dynamically (method.invoke(obj, args)).
-- Create instances at runtime (clazz.newInstance() or clazz.getDeclaredConstructor().newInstance()).
-- Access or modify private fields (field.setAccessible(true)).
+- Intermediate operations (return another stream): filter(), map(), sorted().
+- Terminal operations (produce a result or side effect): collect(), forEach(), reduce().
 
-## Caution:
-Reflection can affect performance and should be used carefully, as it can break encapsulation.
+## Advantages:
+
+- Cleaner and more readable code.
+- Supports parallel processing.
+- Avoids explicit loops and mutations of the original collections.
