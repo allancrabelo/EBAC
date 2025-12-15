@@ -1,67 +1,19 @@
-# Generics in Java
+# Annotations in Java:
 
-Generics allow you to write code that works with different data types without duplicating classes or methods for each type. They provide compile-time type safety.
+Annotations are metadata that can be added to classes, methods, variables, or other code elements. They do not change the program logic but provide additional information to the compiler or frameworks. Common examples:
 
-## Key Concepts:
+`@Override` → indicates a method overrides another.
 
-```
-Basic Syntax:
+`@Deprecated` → marks elements that should no longer be used.
 
-List<String> stringList = new ArrayList<>();
-```
+`@Test` → used in unit testing.
 
-String is the generic type.
+# Exceptions in Java:
 
-The compiler ensures only Strings can be added to the list.
+Exceptions allow a program to handle errors or exceptional situations in an organized way. There are two main types:
 
-## Generic Classes:
+ - Checked Exceptions → must be handled with try-catch or declared with throws.
+ - Unchecked Exceptions → inherit from RuntimeException and handling is optional.
 
-```
-public class Box<T> {
-    private T item;
-
-    public void set(T item) { this.item = item; }
-    public T get() { return item; }
-}
-```
-
-T is a generic type.
-
-Example of usage: Box<Integer> intBox = new Box<>();
-
-## Generic Methods:
-
-```
-public <T> void printItem(T item) {
-    System.out.println(item);
-}
-
-```
-Can accept any type as argument.
-
-## Bounded Types:
-
-```
-public <T extends Number> void showNumber(T number) {
-    System.out.println(number);
-}
-```
-
-Here, T must be a subclass of Number.
-
-## Advantages:
-
- - Type safety (avoids ClassCastException at runtime).
- - More reusable and readable code.
- - Less unnecessary casting.
-
-Wildcard (?):
-```
-List<?> list = new ArrayList<String>();
-```
-
-
-Represents any type.
-```
-Can be bounded: List<? extends Number> or List<? super Integer>.
-```
+## Advantage:
+Using exceptions separates the main logic from error handling, making the code more robust and safe.
