@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Balloon</title>
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		body {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: white;
+		}
+		#balloon {
+			width: 200px;
+			height: 200px;
+			background: red;
+			border-radius: 50%;
+			transition: background-color 120ms ease, width 120ms ease, height 120ms ease;
+			cursor: pointer;
+			user-select: none;
+		}
+	</style>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const balloon = document.getElementById('balloon');
+
+			const MIN_SIZE = 200;
+			const EXPLODE_THRESHOLD = 420;
+			const COLORS = ['red', 'green', 'blue'];
+
+			let size = MIN_SIZE;	
+			let colorIndex = 0;	
+
+			function render() {
+				balloon.style.width = size + 'px';
+				balloon.style.height = size + 'px';
+				balloon.style.backgroundColor = COLORS[colorIndex];
+			}
+
+			function cycleForward() {
+				colorIndex = (colorIndex + 1) % COLORS.length;
+			}
+
+			function cycleBackward() {
+				colorIndex = (colorIndex - 1 + COLORS.length) % COLORS.length;
+			}
+
+			balloon.addEventListener('click', function () {
+				size += 10;
+				cycleForward();
+				if (size > EXPLODE_THRESHOLD) {
+					size = MIN_SIZE;
+					colorIndex = 0;
+				}
+				render();
+			});
+
+			balloon.addEventListener('mouseleave', function () {
+				size = Math.max(MIN_SIZE, size - 5);
+				cycleBackward();
+				render();
+			});
+			render();
+		});
+	</script>
+</head>
+<body>
+	<div id="balloon"></div>
+</body>
+</html>
