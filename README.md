@@ -377,25 +377,6 @@ $(this)                     // Elemento atual
 2. **Use `event.preventDefault()`** em formulários - Impede recarregar página
 3. **Use `$(this)` em eventos** - Referencia o elemento clicado
 4. **Use event delegation para elementos dinâmicos** - `$(document).on('click', 'li', ...)`
-5. **jQuery é mais fácil que JavaScript puro** - Mas aprenda os dois!
 
----
-
-## 🚀 Próximos Passos
-
-1. ✅ Você dominou os **fundamentos**
-2. 📖 Explore a [documentação oficial](https://jquery.com/)
-3. 🔨 Pratique fazendo **seus próprios projetos**
-4. 🎓 Aprenda **JavaScript puro** depois (jQuery é construída nele!)
-
----
-
-## 📚 Recursos Úteis
-
-- [jQuery Official Docs](https://jquery.com/)
-- [jQuery API Reference](https://api.jquery.com/)
-- [W3Schools jQuery Tutorial](https://www.w3schools.com/jquery/)
-
----
 
 **Parabéns!** Você agora sabe o suficiente de jQuery para criar projetos incríveis! 🎉
