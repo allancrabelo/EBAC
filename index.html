@@ -1,113 +1,223 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titan Luxury Motors - Motos de Luxo Exclusivas</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Aurora</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Header/Navegação -->
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">Titan Luxury</div>
-                <ul class="nav-links">
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#colecao">Coleção</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-                <button class="menu-toggle" id="menuToggle">☰</button>
+<body class="bg-light text-body">
+  <header class="border-bottom bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light container py-3">
+      <a class="navbar-brand fw-bold" href="#">Studio Aurora</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegacao">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#carrossel">Portfolios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#destaques">Servicos</a></li>
+          <li class="nav-item"><a class="btn btn-primary" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-6">
+            <p class="text-uppercase text-primary fw-semibold mb-2">Design e Estrategia</p>
+            <h1 class="display-5 fw-bold mb-3">Sites profissionais que elevam sua marca.</h1>
+            <p class="lead text-muted mb-4">Experiencias digitais responsivas, rápidas e com visual moderno usando Bootstrap para entregar qualidade sem complicacao.</p>
+            <div class="d-flex gap-3">
+              <a class="btn btn-primary btn-lg" href="#destaques">Ver projetos</a>
+              <a class="btn btn-outline-primary btn-lg" href="#contato">Fale conosco</a>
             </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Titan Luxury Motors</h1>
-            <p>Engenharia de Luxo em Duas Rodas</p>
-            <a href="#colecao" class="cta-btn">Explorar Coleção</a>
-        </div>
-    </section>
-
-    <!-- Sobre -->
-    <section id="sobre" class="about">
-        <div class="container">
-            <h2>Sobre a Titan</h2>
-            <p>Desde 2009, a Titan Luxury Motors estabeleceu-se como ícone mundial em motos de luxo exclusivas. Cada máquina é uma obra-prima de engenharia e artesanato, combinando performance extrema com design intemporal e sofisticação incomparável.</p>
-            <p>Nossa equipe de mestres artesãos e engenheiros renomados trabalha incansavelmente para criar máquinas que transcendem o ordinário. Utilizamos apenas materiais premium importados, acabamentos de primeira qualidade e tecnologia de ponta para entregar experiências inesquecíveis.</p>
-        </div>
-    </section>
-
-    <!-- Produtos -->
-    <section id="colecao" class="products">
-        <div class="container">
-            <h2>Coleção Exclusiva</h2>
-            <div class="products-grid">
-                <!-- Modelo 1 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Titan Phantom">
-                    </div>
-                    <h3>Titan Phantom</h3>
-                    <p>Obra-prima absoluta com motor turbo personalizado, chassis de titânio e sistema de freios Brembo de última geração. Exclusivo para 5 proprietários globais.</p>
-                    <button class="add-cart">Solicitar Consulta</button>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div id="carrossel" class="carousel slide shadow-lg rounded overflow-hidden" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Equipe criativa trabalhando">
+                  <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                    <h5 class="mb-1">Projetos colaborativos</h5>
+                    <p class="mb-0">Estruturamos squads para acelerar entregas.</p>
+                  </div>
                 </div>
-
-                <!-- Modelo 2 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Titan Eclipse">
-                    </div>
-                    <h3>Titan Eclipse</h3>
-                    <p>Design minimalista ultramoderno com interior em couro Hermès, acabamento em ouro 24K e tecnologia de navegação integrada. Apenas 3 unidades disponíveis.</p>
-                    <button class="add-cart">Solicitar Consulta</button>
+                <div class="carousel-item">
+                  <img src="https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Dashboard em tela grande">
+                  <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                    <h5 class="mb-1">Dados que contam historias</h5>
+                    <p class="mb-0">Dashboards claros para guiar decisoes.</p>
+                  </div>
                 </div>
-
-                <!-- Modelo 3 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Titan Crown">
-                    </div>
-                    <h3>Titan Crown</h3>
-                    <p>A obra-prima clássica reimaginada com componentes de fibra de carbono, suspensão ativa inteligente e desempenho de elite. Edição limitada de 10 unidades.</p>
-                    <button class="add-cart">Solicitar Consulta</button>
+                <div class="carousel-item">
+                  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Notebook com codigo">
+                  <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                    <h5 class="mb-1">Tecnologia confiavel</h5>
+                    <p class="mb-0">Arquitetura responsiva, segura e escalavel.</p>
+                  </div>
                 </div>
-
-                <!-- Modelo 4 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Titan Zenith">
-                    </div>
-                    <h3>Titan Zenith</h3>
-                    <p>Perfeição em movimento com tecnologia quântica de estabilização, painel de controle futurista e acabamento em puro alumínio anodizado. Máximo luxo e inovação.</p>
-                    <button class="add-cart">Solicitar Consulta</button>
-                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Proximo</span>
+              </button>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Contato -->
-    <section id="contato" class="contact">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu Email" required>
-                <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
-                <button type="submit" class="cta-btn">Enviar</button>
-            </form>
+    <section id="destaques" class="py-5 bg-white border-top border-bottom">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+          <div>
+            <p class="text-uppercase text-primary fw-semibold mb-1">Portfolio</p>
+            <h2 class="h3 mb-0">Entregas recentes</h2>
+          </div>
+          <a class="btn btn-outline-primary" href="#contato">Solicitar proposta</a>
         </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Aplicativo mobile">
+              <div class="card-body">
+                <h5 class="card-title">Aplicativo Mobile</h5>
+                <p class="card-text text-muted">Experiencia fluida com componentes prontos do Bootstrap, performance otimizada e acesso offline.</p>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a class="btn btn-primary w-100" href="#">Ver estudo de caso</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="E-commerce moderno">
+              <div class="card-body">
+                <h5 class="card-title">E-commerce Moderno</h5>
+                <p class="card-text text-muted">Catalogo responsivo, checkout rapido e identidade visual consistente para aumentar conversao.</p>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a class="btn btn-outline-primary w-100" href="#">Explorar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Dashboard de dados">
+              <div class="card-body">
+                <h5 class="card-title">Dashboard Executivo</h5>
+                <p class="card-text text-muted">Visualizacoes claras com grids, cards e componentes de navegacao para monitorar indicadores em tempo real.</p>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a class="btn btn-outline-secondary w-100" href="#">Ver detalhes</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Landing page minimalista">
+              <div class="card-body">
+                <h5 class="card-title">Landing Minimalista</h5>
+                <p class="card-text text-muted">Copy direta, contraste forte e chamadas a acao bem posicionadas para captar leads.</p>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a class="btn btn-primary w-100" href="#">Ver projeto</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Site corporativo">
+              <div class="card-body">
+                <h5 class="card-title">Site Corporativo</h5>
+                <p class="card-text text-muted">Layout robusto com grid 3-2-1, otimizado para SEO e acessibilidade AA.</p>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a class="btn btn-outline-primary w-100" href="#">Conhecer</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Portal de conteudo">
+              <div class="card-body">
+                <h5 class="card-title">Portal de Conteudo</h5>
+                <p class="card-text text-muted">Estrutura modular com componentes de cards e listas, pronto para crescer com seu time editorial.</p>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a class="btn btn-outline-secondary w-100" href="#">Detalhes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Titan Luxury Motors - Todos os direitos reservados. | Exclusividade & Prestígio</p>
+    <section id="contato" class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-5">
+            <h2 class="h3 mb-3">Pronto para criar seu proximo site?</h2>
+            <p class="text-muted mb-4">Conte sua ideia e retornaremos com uma proposta alinhada ao seu objetivo.</p>
+            <ul class="list-unstyled text-muted small mb-0">
+              <li class="mb-2">✔ Layout responsivo 3-2-1 com grid do Bootstrap</li>
+              <li class="mb-2">✔ Componentes prontos: carousel, cards e botoes</li>
+              <li class="mb-2">✔ Codigo simples para manter e evoluir</li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-7">
+            <div class="card shadow-sm border-0">
+              <div class="card-body p-4">
+                <form class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="voce@example.com" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Conte o que precisa" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
+  <footer class="py-4 bg-white border-top">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <span class="text-muted">© 2025 Studio Aurora</span>
+      <div class="d-flex gap-3 small">
+        <a class="link-secondary" href="#">LinkedIn</a>
+        <a class="link-secondary" href="#">Behance</a>
+        <a class="link-secondary" href="#">Dribbble</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
