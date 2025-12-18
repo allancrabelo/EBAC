@@ -1,113 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titan Luxury Motors - Motos de Luxo Exclusivas</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Header/Navegação -->
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">Titan Luxury</div>
-                <ul class="nav-links">
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#colecao">Coleção</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-                <button class="menu-toggle" id="menuToggle">☰</button>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Titan Luxury Motors</h1>
-            <p>Engenharia de Luxo em Duas Rodas</p>
-            <a href="#colecao" class="cta-btn">Explorar Coleção</a>
-        </div>
-    </section>
-
-    <!-- Sobre -->
-    <section id="sobre" class="about">
-        <div class="container">
-            <h2>Sobre a Titan</h2>
-            <p>Desde 2009, a Titan Luxury Motors estabeleceu-se como ícone mundial em motos de luxo exclusivas. Cada máquina é uma obra-prima de engenharia e artesanato, combinando performance extrema com design intemporal e sofisticação incomparável.</p>
-            <p>Nossa equipe de mestres artesãos e engenheiros renomados trabalha incansavelmente para criar máquinas que transcendem o ordinário. Utilizamos apenas materiais premium importados, acabamentos de primeira qualidade e tecnologia de ponta para entregar experiências inesquecíveis.</p>
-        </div>
-    </section>
-
-    <!-- Produtos -->
-    <section id="colecao" class="products">
-        <div class="container">
-            <h2>Coleção Exclusiva</h2>
-            <div class="products-grid">
-                <!-- Modelo 1 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Titan Phantom">
-                    </div>
-                    <h3>Titan Phantom</h3>
-                    <p>Obra-prima absoluta com motor turbo personalizado, chassis de titânio e sistema de freios Brembo de última geração. Exclusivo para 5 proprietários globais.</p>
-                    <button class="add-cart">Solicitar Consulta</button>
-                </div>
-
-                <!-- Modelo 2 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Titan Eclipse">
-                    </div>
-                    <h3>Titan Eclipse</h3>
-                    <p>Design minimalista ultramoderno com interior em couro Hermès, acabamento em ouro 24K e tecnologia de navegação integrada. Apenas 3 unidades disponíveis.</p>
-                    <button class="add-cart">Solicitar Consulta</button>
-                </div>
-
-                <!-- Modelo 3 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Titan Crown">
-                    </div>
-                    <h3>Titan Crown</h3>
-                    <p>A obra-prima clássica reimaginada com componentes de fibra de carbono, suspensão ativa inteligente e desempenho de elite. Edição limitada de 10 unidades.</p>
-                    <button class="add-cart">Solicitar Consulta</button>
-                </div>
-
-                <!-- Modelo 4 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Titan Zenith">
-                    </div>
-                    <h3>Titan Zenith</h3>
-                    <p>Perfeição em movimento com tecnologia quântica de estabilização, painel de controle futurista e acabamento em puro alumínio anodizado. Máximo luxo e inovação.</p>
-                    <button class="add-cart">Solicitar Consulta</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contato -->
-    <section id="contato" class="contact">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu Email" required>
-                <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
-                <button type="submit" class="cta-btn">Enviar</button>
+<body class="bg-light">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="card shadow-sm">
+          <div class="card-body p-4">
+            <h1 class="h3 mb-4 text-center">Formulario de Cadastro</h1>
+            <form>
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="voce@example.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Enviar</button>
             </form>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Titan Luxury Motors - Todos os direitos reservados. | Exclusividade & Prestígio</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <!-- Bootstrap JS (opcional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
